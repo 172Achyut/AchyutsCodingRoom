@@ -367,6 +367,9 @@ section .title::after{
 .skills-content .right .js::before{
     width: 66%;
 }
+.skills-content .right .ts::before{
+    width: 60%;
+}
 .skills-content .right .php::before{
     width: 70%;
 }
