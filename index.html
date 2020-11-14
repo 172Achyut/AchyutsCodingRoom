@@ -252,7 +252,7 @@
                 <div class="column right">
                     <div class="text">Message me</div>
                     <form class="gform" method="POST"
-                        action="https://script.google.com/macros/s/AKfycby1kFHwyreV8laAPIJxpf_cUjAVO96ChdlX4iyC/exec">
+                        action="https://script.google.com/macros/s/AKfycby1kFHwyreV8laAPIJxpf_cUjAVO96ChdlX4iyC/exec" autocomplete="off">
                         <div class="fields">
                             <div class="field name">
                                 <input type="text" placeholder="Name" required name="name">
@@ -268,7 +268,7 @@
                             <textarea cols="30" rows="10" placeholder="Message.." required name="message"></textarea>
                         </div>
                         <div class="button">
-                            <button type="submit" value="send mail" name="submit" onclick="sendEmail()">Send
+                            <button type="submit" value="send mail" name="submit" (post)="onPost($event)" >Send
                                 message</button>
                         </div>
                         <div class="thankyou_message" style="display:none;">
