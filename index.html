@@ -252,7 +252,7 @@
                 <div class="column right">
                     <div class="text">Message me</div>
                     <form class="gform" method="POST"
-                        action="https://script.google.com/macros/s/AKfycby1kFHwyreV8laAPIJxpf_cUjAVO96ChdlX4iyC/exec" >
+                        action="https://script.google.com/macros/s/AKfycby1kFHwyreV8laAPIJxpf_cUjAVO96ChdlX4iyC/exec">
                         <div class="fields">
                             <div class="field name">
                                 <input type="text" placeholder="Name" required name="name">
@@ -268,9 +268,17 @@
                             <textarea cols="30" rows="10" placeholder="Message.." required name="message"></textarea>
                         </div>
                         <div class="button">
-                            <button type="submit" value="send mail" name="submit" >Send
+                            <button type="submit" value="send mail" name="submit" onclick="sendMail()">Send
                                 message</button>
                         </div>
+                        <script>
+                            setTimeout(() => {
+                                window.location = "thank.html";
+                                // window.location="index.html#contact";
+                                // location.reload(true);
+                            });
+
+                        </script>
                         <div class="thankyou_message" style="display:none;">
                             <h3><em>Thanks</em> for contacting us!</h3>
                             <h3>
