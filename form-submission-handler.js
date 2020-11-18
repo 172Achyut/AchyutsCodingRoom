@@ -101,6 +101,11 @@
         for (var i = 0; i < buttons.length; i++) {
             buttons[i].disabled = true;
         }
+        setTimeout(() => {
+                    window.location = "thank.html";
+                    // window.location="index.html#contact";
+                    // location.reload(true);
+                }, 2000);
     }
     // document.querySelector('.button').addEventListener("click",function(e){
     //     e.preventDefault();
