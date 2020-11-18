@@ -105,7 +105,7 @@
                     window.location = "thank.html";
                     // window.location="index.html#contact";
                     // location.reload(true);
-                }, 2000);
+                }, 1000);
     }
     // document.querySelector('.button').addEventListener("click",function(e){
     //     e.preventDefault();
