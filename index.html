@@ -255,17 +255,17 @@
                         action="https://script.google.com/macros/s/AKfycby1kFHwyreV8laAPIJxpf_cUjAVO96ChdlX4iyC/exec" >
                         <div class="fields">
                             <div class="field name">
-                                <input type="text" placeholder="Name" required name="name">
+                                <input type="text" id="a" placeholder="Name" required name="name">
                             </div>
                             <div class="field email">
-                                <input type="email" placeholder="Email" required name="email">
+                                <input type="email" id="b" placeholder="Email" required name="email">
                             </div>
                         </div>
                         <div class="field">
-                            <input type="text" placeholder="Subject" required name="subject">
+                            <input type="text" id="c" placeholder="Subject" required name="subject">
                         </div>
                         <div class="field textarea">
-                            <textarea cols="30" rows="10" placeholder="Message.." required name="message"></textarea>
+                            <textarea cols="30" rows="10" id="d" placeholder="Message.." required name="message"></textarea>
                         </div>
                         <div class="button">
                             <button type="submit" value="send mail" name="submit" onclick="sendEmail()" >Send
@@ -273,11 +273,15 @@
                         </div>
                         <script>
                             function sendEmail(){
-                                setTimeout(() => {
-                                    window.location = "thank.html";
-                                    // window.location="index.html#contact";
-                                    // location.reload(true);
-                                }, 2000);
+                                if (document.getElementById('a').value == '' || document.getElementById('b').value == '' || document.getElementById('c').value == '' || document.getElementById('d').value == '') {
+                                    alert('Please Enter Values.')
+                                } else {
+                                    setTimeout(() => {
+                                        window.location = "thank.html";
+                                        // window.location="index.html#contact";
+                                        // location.reload(true);
+                                    }, 2000);
+                                }
                                 
                             }
                         </script>
